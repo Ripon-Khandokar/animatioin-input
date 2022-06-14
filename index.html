@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Form</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    .container form{
+        width:100%;
+        height:100vh;
+        background:rgba(44,22,88);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction: column;
+        gap:1.2em;
+    }
+    form .input-box{
+        width:250px;
+        position: relative;
+    }
+    form .input-box span{
+        color: #dddd;
+        font-size: 1.3em;
+        position: absolute;
+        left: 0;
+        padding: 12px;
+        transition:.2s;
+    }
+    form input{
+        background:rgba(44,22,88);
+        outline:none;
+        padding:15px;
+        width:100%;
+        border: 1px solid #dddd;
+        color:white;
+        font-size: 1.2em;
+    }
+   form input:focus ~ span,
+   form input:valid ~ span
+    {
+        color:aqua;
+        transform:translateX(15px) translateY(-10px);
+        padding: 0px 6px;
+        font-size: 1.1em;
+        letter-spacing:.2em;
+        background: rgba(44,22,88);
+        border-left: 1px solid aqua;
+        border-right:1px solid aqua;
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <form action="#">
+            <div class="input-box">
+                <input type="text" required="required">
+                <span>First Name</span>
+            </div>
+            <div class="input-box">
+                <input type="text" required="required">
+                <span>Last Name</span>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>
